@@ -1,12 +1,27 @@
 # Wag: Connecting Dogs with Their Walkers
 
+![License](https://img.shields.io/github/license/chris-backes/wag-dog-walker-app)
+
 https://secure-savannah-19572.herokuapp.com/
-https://git.heroku.com/secure-savannah-19572.git
 
-git remote rm heroku
-git remote add heroku [the git address above]
+To login with mock credentials use the following:
+Owner:
+- Email: Amos.Schmitt62@hotmail.com
+- Password: password
 
-## Technology
+Walker:
+- Email: Letha_Thompson@gmail.com
+- Password: password
+
+## Description
+
+Wag is a social media platform to connect dog walkers and dog owners. Owners creat profiles and dogs attached to their accounts, and can check avialable openings from walkers.
+
+Walkers can create profiles and add openings for dog owners to find them by.
+
+## Contents
+
+### Technology
 
 The following dependencies are used in production:
 - bcrypt: for hashing passwords
@@ -24,7 +39,7 @@ The following are used in development:
 - Prettier
 - Various ESLint packages
 
-## Models
+### Models
 
 The database has four related tables.
 
@@ -35,14 +50,29 @@ The database has four related tables.
 
 Owners can have many dogs. Appointments in the Calendar store one walker and at most one dog (appointments without dogs attached are ones where the walker is available). Nothing prevents a Walker from walking more than one dog is the same time frame.
 
-## Mock Data
-
-There are two ways to mock data for this repo:
-
-### Faker.js
+### Mock Data
 
 The faker module simulates data for testing purposes, and can be found in the seeds file.
 
-### JSON files
+## Website
 
-The above method is not very userful for mocking the login process for existing users, since the api routes return a hashed password. Instead, there are four files used to make post requests to Heroku for testing the external site.
+https://secure-savannah-19572.herokuapp.com/
+
+![Owner dashboard](./assets/screengrab-owner.png)
+
+![Owner's dog's schedule](./assets/screengrab-owner-schedule.png)
+
+![Owner's add dog page](./assets/screengrab-owner-add-dog.png)
+
+![Walker Dashboard](./assets/screengrab-walker.png)
+
+## License
+
+This project is licensed under the MIT license
+
+## Contact
+
+This app was developed by the following people:
+- Christopher Backes | [github](https://github.com/chris-backes/)
+- Danny Ramirez | [github](https://github.com/dannyramirezgd/)
+- Daniel Kim | [github](https://github.com/danielkim13/)
